@@ -39,10 +39,10 @@ if ($REX['REDAXO'] === true)
   unset($arrJQueryUi['insert']);
   $arrJQueryUi['insert'] = <<<EOT
 
-  <!-- jQuery UI start -->
+<!-- jQuery UI start -->
   <link type="text/css" href="{$arrJQueryUi['path']}/ui-lightness/jquery-ui-{$arrJQueryUi['version']}.custom.css" rel="stylesheet" />
   <script type="text/javascript" src="{$arrJQueryUi['path']}/jquery-ui-{$arrJQueryUi['version']}.custom.min.js"></script>
-  <!-- jQuery UI end -->
+<!-- jQuery UI end -->
 
 EOT;
   
