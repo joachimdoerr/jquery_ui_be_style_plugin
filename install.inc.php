@@ -11,14 +11,13 @@ jQuery UI Plugin install.inc.php
 
 // ADDON IDENTIFIER AUS GET PARAMS
 ////////////////////////////////////////////////////////////////////////////////
-$mypage = rex_request('addonname','string');
+$mypage = rex_request('pluginname','string');
 
 
 // INSTALL CONDITIONS
 ////////////////////////////////////////////////////////////////////////////////
 $requiered_REX = '4.3.1';
 $requiered_PHP = 5;
-$requiered_addons = array('be_style');
 $do_install = true;
 
 
@@ -40,27 +39,6 @@ if (intval(PHP_VERSION) < $requiered_PHP)
 	$REX['ADDON']['installmsg'][$mypage] = 'Dieses Addon ben&ouml;tigt mind. PHP '.$requiered_PHP.'!';
 	$REX['ADDON']['install'][$mypage] = 0;
 	$do_install = false;
-}
-
-
-// CHECK REQUIERED ADDONS
-////////////////////////////////////////////////////////////////////////////////
-foreach($requiered_addons as $a)
-{
-  if (!OOAddon::isInstalled($a))
-  {
-    $REX['ADDON']['installmsg'][$mypage] = '<br />Addon "'.$a.'" ist nicht installiert.  >>> <a href="index.php?page=addon&addonname='.$a.'&install=1">jetzt installieren</a> <<<';
-    $do_install = false;
-  }
-  else
-  {
-    if (!OOAddon::isAvailable($a))
-    {
-      $REX['ADDON']['installmsg'][$mypage] = '<br />Addon "'.$a.'" ist nicht aktiviert.  >>> <a href="index.php?page=addon&addonname='.$a.'&activate=1">jetzt aktivieren</a> <<<';
-      $do_install = false;
-    }
-
-  }
 }
 
 
