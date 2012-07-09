@@ -1,17 +1,24 @@
 <?php
+/*
+jQuery UI Plugin help.inc.php
 
-/**
- * jQuery UI Plugin
- * 
- * @author mail[at]joachim-doerr[dot]com Joachim Doerr
- *
- * @package redaxo4
- * @version svn:$Id$
- */
- 
+@author mail[at]joachim-doerr[dot]com Joachim Doerr
+@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
+
+@package redaxo4
+@version 1.2.6
+*/
+
+// ADDON IDENTIFIER AUS ORDNERNAMEN ABLEITEN
+////////////////////////////////////////////////////////////////////////////////
+$mypage = 'jquery_ui';
+$myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
+
+
+// HELP CONTENT
+////////////////////////////////////////////////////////////////////////////////
 ?>
- 
-<h2 style="margin-bottom:10px;">jQuery UI "be_style" Plugin für Redaxo | 2011.12.06 | Ver. 1.2.5</h2>
+<h2 style="margin-bottom:10px;">jQuery UI "be_style" Plugin für Redaxo | 2012.07.09 | Ver. 1.2.6</h2>
 <h3 style="margin:10px 0 0 0">Systemvoraussetzungen</h3>
 <p>jQuery UI ist ein Plugin für das &quot;be_style&quot; Addon und kann eingesetzt werden ab Redaxo 4.2 </p>
 <h3 style="margin:10px 0 0 0">Installation</h3>
@@ -36,9 +43,10 @@
 
 <?php
 
-if ($REX['ADDON']['plugins']['be_style']['status']['jquery_ui'] == true) {
-
+// INCLUDE DEMO OUTPUT
+////////////////////////////////////////////////////////////////////////////////
+if ($REX['ADDON']['plugins']['be_style']['status']['jquery_ui'] === true)
+{
   echo '<h3 style="margin:30px 0 0 0">jQuery UI Demos</h3>';
-  include('pages/jquery-ui-demo-modul.php');
-  
+  require_once( $myroot.'pages/jquery-ui-demo-modul.php' );
 }

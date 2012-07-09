@@ -1,18 +1,17 @@
 <?php
+/*
+jQuery UI Plugin uninstall.inc.php
 
-/**
- * jQuery UI Plugin
- * 
- * @author mail[at]joachim-doerr[dot]com Joachim Doerr
- *
- * @package redaxo4
- * @version svn:$Id$
- */
+@author mail[at]joachim-doerr[dot]com Joachim Doerr
+@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
 
-$error = '';
+@package redaxo4
+@version 1.2.6
+*/
 
-if ($error != '') {
-  $REX['ADDON']['installmsg']['jquery_ui'] = $error;
-} else {
-  $REX['ADDON']['install']['jquery_ui'] = 0;
-}
+// ADDON IDENTIFIER AUS GET PARAMS
+////////////////////////////////////////////////////////////////////////////////
+$mypage = rex_request('addonname','string');
+
+
+$REX['ADDON']['install'][$mypage] = 0;

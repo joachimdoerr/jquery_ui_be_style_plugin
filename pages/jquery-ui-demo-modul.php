@@ -1,14 +1,16 @@
 <?php
+/*
+jQuery UI Plugin jquery-ui-demo-modul.php
 
-/**
- * jQuery UI Plugin
- * 
- * @author mail[at]joachim-doerr[dot]com Joachim Doerr
- *
- * @package redaxo4
- * @version svn:$Id$
- */
- 
+@author mail[at]joachim-doerr[dot]com Joachim Doerr
+@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
+
+@package redaxo4
+@version 1.2.6
+*/
+
+// DEMO OUTPUT CONTENT
+////////////////////////////////////////////////////////////////////////////////
 ?>
 
 		<script type="text/javascript">
