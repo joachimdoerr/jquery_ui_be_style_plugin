@@ -12,7 +12,7 @@ jQuery UI Plugin config.inc.php
 // ADDON IDENTIFIER AUS ORDNERNAMEN ABLEITEN
 ////////////////////////////////////////////////////////////////////////////////
 $mypage = 'jquery_ui';
-$myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
+$myroot = $REX['INCLUDE_PATH'].'/addons/be_style/plugins/'.$mypage.'/';
 
 
 // ADDON REX COMMONS

@@ -9,12 +9,6 @@ jQuery UI Plugin help.inc.php
 @version 1.2.6
 */
 
-// ADDON IDENTIFIER AUS ORDNERNAMEN ABLEITEN
-////////////////////////////////////////////////////////////////////////////////
-$mypage = 'jquery_ui';
-$myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
-
-
 // HELP CONTENT
 ////////////////////////////////////////////////////////////////////////////////
 ?>
@@ -48,5 +42,5 @@ $myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
 if ($REX['ADDON']['plugins']['be_style']['status']['jquery_ui'] === true)
 {
   echo '<h3 style="margin:30px 0 0 0">jQuery UI Demos</h3>';
-  require_once( $myroot.'pages/jquery-ui-demo-modul.php' );
+  require_once( 'pages/jquery-ui-demo-modul.php' );
 }

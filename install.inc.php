@@ -16,7 +16,7 @@ $mypage = rex_request('pluginname','string');
 
 // INSTALL CONDITIONS
 ////////////////////////////////////////////////////////////////////////////////
-$requiered_REX = '4.3.1';
+$requiered_REX = '4.2.0';
 $requiered_PHP = 5;
 $do_install = true;
 
