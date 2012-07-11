@@ -1,12 +1,12 @@
 <?php
 /*
-jQuery UI Plugin help.inc.php
+help.inc.php
 
+@copyright Copyright (c) 2012 by Doerr Softwaredevelopment
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
-@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
 
 @package redaxo4
-@version 1.2.6
+@version 1.2.7
 */
 
 // HELP CONTENT

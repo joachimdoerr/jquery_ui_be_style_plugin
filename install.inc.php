@@ -1,17 +1,22 @@
 <?php
 /*
-jQuery UI Plugin install.inc.php
+install.inc.php
 
+@copyright Copyright (c) 2012 by Doerr Softwaredevelopment
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
-@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
 
 @package redaxo4
-@version 1.2.6
+@version 1.2.7
 */
 
-// ADDON IDENTIFIER AUS GET PARAMS
+// PLUGIN IDENTIFIER AUS GET PARAMS
 ////////////////////////////////////////////////////////////////////////////////
-$mypage = rex_request('pluginname','string');
+$strPluginName = rex_request('pluginname','string');
+
+
+// LOAD I18N FILE
+////////////////////////////////////////////////////////////////////////////////
+$I18N->appendFile(dirname(__FILE__) . '/lang/');
 
 
 // INSTALL CONDITIONS
@@ -26,8 +31,8 @@ $do_install = true;
 $this_REX = $REX['VERSION'].'.'.$REX['SUBVERSION'].'.'.$REX['MINORVERSION'] = "1";
 if(version_compare($this_REX, $requiered_REX, '<'))
 {
-	$REX['ADDON']['installmsg'][$mypage] = 'Dieses Addon ben&ouml;tigt Redaxo Version '.$requiered_REX.' oder h&ouml;her.';
-	$REX['ADDON']['install'][$mypage] = 0;
+	$REX['ADDON']['installmsg'][$strPluginName] = str_replace('###version###', $requiered_REX, $I18N->msg($strPluginName.'_install_need_rex'));
+	$REX['ADDON']['install'][$strPluginName] = 0;
 	$do_install = false;
 }
 
@@ -36,8 +41,8 @@ if(version_compare($this_REX, $requiered_REX, '<'))
 ////////////////////////////////////////////////////////////////////////////////
 if (intval(PHP_VERSION) < $requiered_PHP)
 {
-	$REX['ADDON']['installmsg'][$mypage] = 'Dieses Addon ben&ouml;tigt mind. PHP '.$requiered_PHP.'!';
-	$REX['ADDON']['install'][$mypage] = 0;
+	$REX['ADDON']['installmsg'][$strPluginName] = str_replace('###version###', $requiered_PHP, $I18N->msg($strPluginName.'_install_need_php'));
+	$REX['ADDON']['install'][$strPluginName] = 0;
 	$do_install = false;
 }
 
@@ -46,5 +51,5 @@ if (intval(PHP_VERSION) < $requiered_PHP)
 ////////////////////////////////////////////////////////////////////////////////
 if ($do_install)
 {
-	$REX['ADDON']['install'][$mypage] = 1;
+	$REX['ADDON']['install'][$strPluginName] = 1;
 }

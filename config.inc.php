@@ -1,25 +1,25 @@
 <?php
 /*
-jQuery UI Plugin config.inc.php
+config.inc.php
 
+@copyright Copyright (c) 2012 by Doerr Softwaredevelopment
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
-@author <a href="http://joachim-doerr.com">joachim-doerr.com</a>
 
 @package redaxo4
-@version 1.2.6
+@version 1.2.7
 */
 
 // ADDON IDENTIFIER AUS ORDNERNAMEN ABLEITEN
 ////////////////////////////////////////////////////////////////////////////////
-$mypage = 'jquery_ui';
-$myroot = $REX['INCLUDE_PATH'].'/addons/be_style/plugins/'.$mypage.'/';
+$strPluginName = 'jquery_ui';
+$strPluginPath = $REX['INCLUDE_PATH'].'/addons/be_style/plugins/'.$strPluginName.'/';
 
 
 // ADDON REX COMMONS
 ////////////////////////////////////////////////////////////////////////////////
-$REX['ADDON']['version'][$mypage]     = '1.2.6';
-$REX['ADDON']['author'][$mypage]      = 'Joachim Doerr';
-$REX['ADDON']['supportpage'][$mypage] = 'forum.redaxo.de';
+$REX['ADDON']['version'][$strPluginName]     = '1.2.7';
+$REX['ADDON']['author'][$strPluginName]      = 'Joachim Doerr';
+$REX['ADDON']['supportpage'][$strPluginName] = 'forum.redaxo.de';
 
 
 // REDAXO BACKEND
@@ -34,7 +34,7 @@ if ($REX['REDAXO'] === true)
   ////////////////////////////////////////////////////////////////////////////////
   $arrJQueryUi = array(
     'version' => '1.8.21',
-    'path'    => '../files/addons/be_style/plugins/'.$mypage.'/'
+    'path'    => '../files/addons/be_style/plugins/'.$strPluginName.'/'
   );
   
   
