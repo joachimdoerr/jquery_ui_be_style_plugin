@@ -33,8 +33,9 @@ if ($REX['REDAXO'] === true)
   // JQUERY UI DATA
   ////////////////////////////////////////////////////////////////////////////////
   $arrJQueryUi = array(
-    'version' => '1.8.21',
-    'path'    => '../files/addons/be_style/plugins/'.$strPluginName.'/'
+    'style_path' => 'redmond',
+    'version'    => '1.9.1',
+    'path'       => '../files/addons/be_style/plugins/'.$strPluginName.'/'
   );
   
   
@@ -44,7 +45,7 @@ if ($REX['REDAXO'] === true)
   $arrJQueryUi['insert'] = <<<EOT
 
 <!-- jQuery UI start -->
-  <link type="text/css" href="{$arrJQueryUi['path']}/ui-lightness/jquery-ui-{$arrJQueryUi['version']}.custom.css" rel="stylesheet" />
+  <link type="text/css" href="{$arrJQueryUi['path']}/{$arrJQueryUi['style_path']}/jquery-ui-{$arrJQueryUi['version']}.custom.min.css" rel="stylesheet" />
   <script type="text/javascript" src="{$arrJQueryUi['path']}/jquery-ui-{$arrJQueryUi['version']}.custom.min.js"></script>
 <!-- jQuery UI end -->
 
