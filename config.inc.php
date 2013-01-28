@@ -34,7 +34,7 @@ if ($REX['REDAXO'] === true)
   ////////////////////////////////////////////////////////////////////////////////
   $arrJQueryUi = array(
     'style_path' => 'redmond',
-    'version'    => '1.9.1',
+    'version'    => '1.10.0',
     'path'       => '../files/addons/be_style/plugins/'.$strPluginName.'/'
   );
   
