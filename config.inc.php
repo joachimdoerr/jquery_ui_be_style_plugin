@@ -6,7 +6,7 @@ config.inc.php
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
 
 @package redaxo4
-@version 1.2.7
+@version 1.3
 */
 
 // ADDON IDENTIFIER AUS ORDNERNAMEN ABLEITEN
@@ -29,12 +29,12 @@ if ($REX['REDAXO'] === true)
   // LOAD I18N FILE
   ////////////////////////////////////////////////////////////////////////////////
   $I18N->appendFile(dirname(__FILE__) . '/lang/');
-
+  
+  
   // JQUERY UI DATA
   ////////////////////////////////////////////////////////////////////////////////
   $arrJQueryUi = array(
-    'style_path' => 'redmond',
-    'version'    => '1.10.0',
+    'js_file'    => 'jquery-ui.min.js',
     'path'       => '../files/addons/be_style/plugins/'.$strPluginName.'/'
   );
   
@@ -44,10 +44,8 @@ if ($REX['REDAXO'] === true)
   unset($arrJQueryUi['insert']);
   $arrJQueryUi['insert'] = <<<EOT
 
-<!-- jQuery UI start -->
-  <link type="text/css" href="{$arrJQueryUi['path']}/{$arrJQueryUi['style_path']}/jquery-ui-{$arrJQueryUi['version']}.custom.min.css" rel="stylesheet" />
-  <script type="text/javascript" src="{$arrJQueryUi['path']}/jquery-ui-{$arrJQueryUi['version']}.custom.min.js"></script>
-<!-- jQuery UI end -->
+  <!-- jQuery UI JS -->
+  <script type="text/javascript" src="{$arrJQueryUi['path']}/{$arrJQueryUi['js_file']}"></script>
 
 EOT;
   

@@ -6,7 +6,7 @@ install.inc.php
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
 
 @package redaxo4
-@version 1.2.7
+@version 1.3
 */
 
 // PLUGIN IDENTIFIER AUS GET PARAMS

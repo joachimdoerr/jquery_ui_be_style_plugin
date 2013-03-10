@@ -6,8 +6,16 @@ help.inc.php
 @author mail[at]joachim-doerr[dot]com Joachim Doerr
 
 @package redaxo4
-@version 1.2.7
+@version 1.3
 */
+
+
+// LOAD I18N FILE
+////////////////////////////////////////////////////////////////////////////////
+if (!OOPlugin::isInstalled('be_style', 'jquery_ui') or !OOPlugin::isActivated('be_style', 'jquery_ui')) {
+  $I18N->appendFile(dirname(__FILE__) . '/lang/');
+}
+
 
 // HELP CONTENT
 ////////////////////////////////////////////////////////////////////////////////
@@ -34,8 +42,8 @@ help.inc.php
 <p><?php echo $I18N->msg('jquery_ui_default_errors_solution_text'); ?></p>
 <h3 style="margin:10px 0 0 0"><?php echo $I18N->msg('jquery_ui_plugin_function_headline'); ?></h3>
 <p><?php echo $I18N->msg('jquery_ui_plugin_function_text'); ?></p>
-
 <?php
+
 
 // INCLUDE DEMO OUTPUT
 ////////////////////////////////////////////////////////////////////////////////
