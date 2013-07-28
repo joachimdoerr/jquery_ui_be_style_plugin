@@ -35,7 +35,7 @@ if ($REX['REDAXO'] === true)
   ////////////////////////////////////////////////////////////////////////////////
   $arrJQueryUi = array(
     'js_file'    => 'jquery-ui.min.js',
-    'path'       => '../files/addons/be_style/plugins/'.$strPluginName.'/'
+    'path'       => '../files/addons/be_style/plugins/'.$strPluginName
   );
   
   
